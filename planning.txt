@@ -1,0 +1,38 @@
+what? 
+functionality  where user can give votes to the candidates
+
+#functionality:
+
+1.user signin and login
+2.see the list of candidates
+3.vote one candidate,ather that user cant vote again
+4.route that shows the list of candidates and their live vote counts 
+  sorted by their vote cnt
+5.user data must contain one unique govn id proof:adhar card
+6.one admin that maintains the list of candidates and he cant vote at all
+7.user can change their passwrod
+8.user can login only using their adhar card number and passwrod
+
+---------------------------------------------------------------------------
+
+Routes
+
+User authentication:
+  /signup: POST - Create a new user acc
+  /login: POST - login to existing acc(ahar+pwd)
+
+Voting:
+  /candidates: GET - Get list of candidates
+  /vote/:candidateID: POST - vote for specific candidate
+
+Vote counts:
+  /vote/counts: GET - get list of candidates sorted by their vote counts
+
+User Profile:
+  /profile: GET - get the users profile infromation
+  /profile/passwrod: PUT - change the users passwrod
+
+Admin candidate management:
+  /candidate: POST - create a new candidate
+  /candidates/:candidateID: PUT - update an existing candidate
+  /candidates/:candidateID: DELETE - delete a candidate from the list
